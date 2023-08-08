@@ -6,11 +6,12 @@
       width: 100%;
       height: 116px;
       position: relative;
-      padding-left: 79px;
-      padding-right: 79px;
+      padding-left: 80px;
+      padding-right: 80px;
       padding-top: 43px;
       padding-bottom: 43px;
       justify-content: space-between;
+      background: #eeeeee;
     "
   >
     <div

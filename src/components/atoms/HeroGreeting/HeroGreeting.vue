@@ -4,10 +4,11 @@
     style="
       width: 100%;
       height: 656.22px;
-      padding-top: 220px;
-      padding-left: 66.94px;
-      padding-right: 66.94px;
+      padding-top: 100px;
+      padding-left: 64px;
+      padding-right: 64px;
       padding-bottom: 100px;
+      background: #eeeeee;
     "
   >
     <div
