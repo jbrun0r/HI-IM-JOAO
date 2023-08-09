@@ -8,7 +8,6 @@
       padding-left: 64px;
       padding-right: 64px;
       padding-bottom: 100px;
-      background: #eeeeee;
     "
   >
     <div

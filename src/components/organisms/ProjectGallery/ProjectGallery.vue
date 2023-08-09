@@ -10,7 +10,6 @@ import ProjectItem from "@/components/organisms/ProjectItem/ProjectItem.vue";
       padding-left: 80px;
       padding-right: 80px;
       padding-bottom: 80px;
-      background: #eeeeee;
       justify-content: space-between;
       display: flex;
       flex-direction: column;
