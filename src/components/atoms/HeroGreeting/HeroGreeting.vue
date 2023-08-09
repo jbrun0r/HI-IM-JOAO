@@ -52,7 +52,7 @@
     <div
       class="description-section"
       style="
-        width: 260px;
+        width: 280px;
         height: 80px;
         left: 80px;
         top: 432.16px;
@@ -71,8 +71,9 @@
             word-wrap: break-word;
           "
         >
-          Researcher, Full Stack<br />Developer and Computer<br />Engineering
-          student at the<br />Federal Institute of Education,
+          Researcher,<br />Full Stack Developer<br />
+          and Computer Engineering student<br />at the Federal Institute of
+          Education,<br />Science and Technology of Ceará.
         </div>
       </div>
     </div>

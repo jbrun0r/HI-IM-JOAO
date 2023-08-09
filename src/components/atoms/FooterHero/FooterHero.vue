@@ -51,7 +51,7 @@
         word-wrap: break-word;
       "
     >
-      All Projects (08)
+      All Projects (06)
     </div>
   </div>
 </template>
