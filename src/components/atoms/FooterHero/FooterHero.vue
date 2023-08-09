@@ -11,7 +11,6 @@
       padding-top: 43px;
       padding-bottom: 43px;
       justify-content: space-between;
-      background: #eeeeee;
     "
   >
     <div

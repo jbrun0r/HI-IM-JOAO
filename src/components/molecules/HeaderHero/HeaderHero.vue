@@ -26,7 +26,6 @@
   justify-content: space-between;
   align-items: center;
   display: flex;
-  background: #eeeeee;
 }
 
 .link-logo-png {
