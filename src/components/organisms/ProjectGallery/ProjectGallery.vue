@@ -16,52 +16,21 @@
 </template>
 
 <script lang="ts" setup>
+import { toRefs } from "vue";
 import ProjectItem from "@/components/organisms/ProjectItem/ProjectItem.vue";
 
-const projectPairs = [
-  [
-    {
-      class: "item-60",
-      projectName: "Lorem Ipsum",
-      projectStacks: "is simply dummy text",
-      img: "https://via.placeholder.com/866x635",
-    },
-    {
-      class: "item-30",
-      projectName: "Lorem Ipsum",
-      projectStacks: "is simply dummy text",
-      img: "https://via.placeholder.com/433x635",
-    },
-  ],
-  [
-    {
-      class: "item-30",
-      projectName: "Lorem Ipsum",
-      projectStacks: "is simply dummy text",
-      img: "https://via.placeholder.com/433x635",
-    },
-    {
-      class: "item-60",
-      projectName: "Lorem Ipsum",
-      projectStacks: "is simply dummy text",
-      img: "https://via.placeholder.com/866x635",
-    },
-  ],
-  [
-    {
-      class: "item-60",
-      projectName: "Lorem Ipsum",
-      projectStacks: "is simply dummy text",
-      img: "https://via.placeholder.com/866x635",
-    },
-    {
-      class: "item-30",
-      projectName: "Lorem Ipsum",
-      projectStacks: "is simply dummy text",
-      img: "https://via.placeholder.com/433x635",
-    },
-  ],
-];
+interface Project {
+  class: string;
+  projectName: string;
+  projectStacks: string;
+  img: string;
+}
+
+const props = defineProps({
+  projectPairs: { type: Array as () => Array<Array<Project>>, required: true },
+});
+
+const { projectPairs } = toRefs(props);
 </script>
 
 <style scoped>
