@@ -3,11 +3,21 @@ const props = defineProps({
   projectName: { type: String, required: true },
   projectStacks: { type: String, required: true },
   img: { type: String, required: true },
+  link: { type: String },
 });
+
+const redirectToLink = () => {
+  if (props.link) {
+    window.open(props.link, "_blank");
+  }
+};
 </script>
 
 <template>
-  <article class="project-item flex flex-col w-full h-full cursor-pointer">
+  <article
+    @click="redirectToLink"
+    class="project-item flex flex-col w-full h-full cursor-pointer"
+  >
     <div class="image-container w-full min-h-full overflow-hidden relative">
       <div class="image-overlay" />
       <img class="project-image w-full h-full object-cover" :src="props.img" />

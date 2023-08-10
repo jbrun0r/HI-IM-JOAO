@@ -2,13 +2,13 @@
   <footer
     class="footer-section flex w-full h-28 px-20 py-11 justify-between items-center"
   >
-    <div class="scroll-button cursor-pointer">
+    <div class="scroll-button">
       <div class="scroll-to-explore flex flex-row gap-4 items-center">
         <span class="scroll-to-explore-text">Scroll To Explore</span>
         <vue-feather class="scroll-to-explore-icon" type="arrow-down-right" />
       </div>
     </div>
-    <div class="project-count">All Projects (06)</div>
+    <div class="project-count">All Projects (08)</div>
   </footer>
 </template>
 

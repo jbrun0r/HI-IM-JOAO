@@ -21,11 +21,7 @@ activeItem.value = item.value;
   <header
     class="header flex w-full h-32 pt-1 pb-5 px-16 justify-between items-center"
   >
-    <img
-      class="link-logo"
-      src="https://via.placeholder.com/131x50"
-      alt="Logo"
-    />
+    <span class="link-logo flex items-center">>_</span>
 
     <nav class="nav-list flex pt-5 pb-4 ml-5 gap-12">
       <div class="item-link">
@@ -37,10 +33,10 @@ activeItem.value = item.value;
           Home
         </a>
       </div>
-      <div class="item-link">
+      <div class="item-link cursor-not-allowed">
         <a
           href="#"
-          class="item-link-contact"
+          class="item-link-contact cursor-not-allowed"
           :class="{ 'active-link': activeItem === 'contact' }"
         >
           Contact
@@ -49,7 +45,7 @@ activeItem.value = item.value;
       <div class="item-link">
         <a
           href="#"
-          class="item-link-about"
+          class="item-link-about cursor-not-allowed"
           :class="{ 'active-link': activeItem === 'about' }"
         >
           About
@@ -63,11 +59,16 @@ activeItem.value = item.value;
 .link-logo {
   width: 131px;
   height: 50px;
+  color: #222222;
+  font-size: 36px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 24px;
+  word-wrap: break-word;
 }
 
 .item-link {
   display: flex;
-  cursor: pointer;
 }
 
 .item-link a {

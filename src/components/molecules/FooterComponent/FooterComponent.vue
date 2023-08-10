@@ -14,11 +14,24 @@
       <p class="year-text-c">© 2023 João Bruno</p>
     </div>
     <nav
-      class="footer-right flex flex-row gap-x-5 items-center w-1/3 justify-end"
+      class="footer-right flex flex-row gap-x-5 items-center w-1/3 justify-end align-items-center"
     >
-      <vue-feather class="w-5 cursor-pointer" type="linkedin" />
-      <vue-feather class="w-5 cursor-pointer" type="github" />
-      <vue-feather class="w-5 cursor-pointer" type="share-2" />
+      <a
+        href="https://www.linkedin.com/in/joaobrunodev/"
+        class="w-5 cursor-pointer flex items-center"
+      >
+        <vue-feather class="w-5" type="linkedin" />
+      </a>
+
+      <a
+        href="https://github.com/jbrun0r"
+        class="w-5 cursor-pointer flex items-center"
+      >
+        <vue-feather class="w-5" type="github" />
+      </a>
+      <a href="#" class="w-5 cursor-not-allowed flex items-center">
+        <vue-feather class="w-5 cursor-not-allowed" type="share-2" />
+      </a>
     </nav>
   </footer>
 </template>
