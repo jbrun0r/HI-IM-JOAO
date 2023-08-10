@@ -1,57 +1,25 @@
 <template>
-  <div class="footer-container">
-    <div
-      class="footer-content"
-      style="display: flex; flex-direction: row; gap: 13px"
-    >
-      <vue-feather type="arrow-up-right" style="margin: auto"></vue-feather>
-      <div class="scroll-text">Thanks for scrolling.</div>
+  <footer
+    class="footer-container w-full h-28 px-20 pt-5 pb-10 flex justify-between mx-auto items-center"
+  >
+    <div class="footer-left flex flex-row gap-4 items-center">
+      <vue-feather type="arrow-up-right" />
+      <p class="scroll-text">Thanks for scrolling.</p>
     </div>
-    <div class="footer-content">
-      <div class="year-text">© 2023 João Bruno</div>
+    <div class="footer-center text-center justify-self-center">
+      <p class="year-text-c">© 2023 João Bruno</p>
     </div>
-    <div
-      class="footer-content"
-      style="display: flex; flex-direction: row; gap: 13px"
-    >
-      <vue-feather
-        type="linkedin"
-        style="width: 20px; margin: auto"
-      ></vue-feather>
-      <vue-feather
-        type="github"
-        style="width: 20px; margin: auto"
-      ></vue-feather>
-      <vue-feather
-        type="share-2"
-        style="width: 20px; margin: auto"
-      ></vue-feather>
-    </div>
-  </div>
+    <nav class="footer-right flex flex-row gap-x-5 items-center">
+      <vue-feather class="w-5 cursor-pointer" type="linkedin" />
+      <vue-feather class="w-5 cursor-pointer" type="github" />
+      <vue-feather class="w-5 cursor-pointer" type="share-2" />
+    </nav>
+  </footer>
 </template>
 
 <script lang="ts" setup></script>
 
 <style scoped>
-.footer-container {
-  width: 100%;
-  height: 100px;
-  padding-left: 80px;
-  padding-right: 80px;
-  padding-top: 20px;
-  padding-bottom: 40px;
-  display: flex;
-  justify-self: center;
-  justify-content: space-between;
-  margin: auto;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: row;
-  gap: 13px;
-}
-
 .scroll-text {
   text-align: center;
   color: #222222;
@@ -63,7 +31,7 @@
   margin: auto;
 }
 
-.year-text {
+.year-text-c {
   text-align: center;
   color: #222222;
   font-size: 13px;
