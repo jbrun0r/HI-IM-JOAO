@@ -1,6 +1,6 @@
 <template>
   <header
-    class="header flex w-full h-32 pt-7 px-16 justify-between items-center"
+    class="header flex w-full h-32 pt-1 pb-5 px-16 justify-between items-center"
   >
     <img
       class="link-logo"
