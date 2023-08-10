@@ -10,6 +10,7 @@
         :projectName="project.projectName"
         :projectStacks="project.projectStacks"
         :img="project.img"
+        :link="project.link"
       />
     </tuple>
   </section>
@@ -24,6 +25,7 @@ interface Project {
   projectName: string;
   projectStacks: string;
   img: string;
+  link: string;
 }
 
 const props = defineProps({
