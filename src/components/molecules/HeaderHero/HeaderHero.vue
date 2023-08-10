@@ -1,3 +1,22 @@
+<script lang="ts" setup>
+import { ref, toRef } from "vue";
+
+const activeItem = ref("");
+
+type Item = "home" | "contact" | "about";
+
+const props = defineProps({
+  activeItem: {
+    type: String as () => Item,
+    required: true,
+  },
+});
+
+const item = toRef(props, "activeItem");
+
+activeItem.value = item.value;
+</script>
+
 <template>
   <header
     class="header flex w-full h-32 pt-1 pb-5 px-16 justify-between items-center"
@@ -10,19 +29,35 @@
 
     <nav class="nav-list flex pt-5 pb-4 ml-5 gap-12">
       <div class="item-link">
-        <a href="#" class="item-link-home">Home</a>
+        <a
+          href="#"
+          class="item-link-home"
+          :class="{ 'active-link': activeItem === 'home' }"
+        >
+          Home
+        </a>
       </div>
       <div class="item-link">
-        <a href="#" class="item-link-contact">Contact</a>
+        <a
+          href="#"
+          class="item-link-contact"
+          :class="{ 'active-link': activeItem === 'contact' }"
+        >
+          Contact
+        </a>
       </div>
       <div class="item-link">
-        <a href="#" class="item-link-about">About</a>
+        <a
+          href="#"
+          class="item-link-about"
+          :class="{ 'active-link': activeItem === 'about' }"
+        >
+          About
+        </a>
       </div>
     </nav>
   </header>
 </template>
-
-<script lang="ts" setup></script>
 
 <style scoped>
 .link-logo {
@@ -42,5 +77,9 @@
   text-transform: uppercase;
   line-height: 24px;
   word-wrap: break-word;
+}
+
+.active-link {
+  border-bottom: 1px solid #222222;
 }
 </style>

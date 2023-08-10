@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { defineProps } from "vue";
-
 const props = defineProps({
   projectName: { type: String, required: true },
   projectStacks: { type: String, required: true },
