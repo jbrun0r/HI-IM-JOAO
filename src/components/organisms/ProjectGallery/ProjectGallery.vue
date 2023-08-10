@@ -1,87 +1,85 @@
-<script lang="ts" setup>
-import ProjectItem from "@/components/organisms/ProjectItem/ProjectItem.vue";
-</script>
-
 <template>
-  <div
-    class="portfolio-section"
-    style="
-      width: 100%;
-      padding-left: 80px;
-      padding-right: 80px;
-      padding-bottom: 80px;
-      justify-content: space-between;
-      display: flex;
-      flex-direction: column;
-    "
+  <section
+    class="portfolio-section flex flex-col w-full px-20 pb-20 justify-between"
   >
-    <div
-      style="
-        width: 100%;
-        justify-content: space-between;
-        display: flex;
-        flex-direction: row;
-        padding-bottom: 150px;
-      "
-    >
+    <tuple class="tuple-items" v-for="pair in projectPairs" :key="pair[0].img">
       <ProjectItem
-        style="width: 60%; height: 635px"
-        projectName="Lorem Ipsum"
-        projectStacks="is simply dummy tex"
-        img="https://via.placeholder.com/866x635"
-      ></ProjectItem>
-      <ProjectItem
-        style="width: 30%; height: 635px"
-        projectName="Lorem Ipsum"
-        projectStacks="is simply dummy tex"
-        img="https://via.placeholder.com/433x635"
-      ></ProjectItem>
-    </div>
-    <div
-      style="
-        width: 100%;
-        justify-content: space-between;
-        display: flex;
-        flex-direction: row;
-        padding-bottom: 150px;
-      "
-    >
-      <ProjectItem
-        style="width: 30%; height: 635px"
-        projectName="Lorem Ipsum"
-        projectStacks="is simply dummy tex"
-        img="https://via.placeholder.com/433x635"
-      ></ProjectItem>
-      <ProjectItem
-        style="width: 60%; height: 635px"
-        projectName="Lorem Ipsum"
-        projectStacks="is simply dummy tex"
-        img="https://via.placeholder.com/866x635"
-      ></ProjectItem>
-    </div>
-    <div
-      style="
-        width: 100%;
-        justify-content: space-between;
-        display: flex;
-        flex-direction: row;
-        padding-bottom: 150px;
-      "
-    >
-      <ProjectItem
-        style="width: 60%; height: 635px"
-        projectName="Lorem Ipsum"
-        projectStacks="is simply dummy tex"
-        img="https://via.placeholder.com/866x635"
-      ></ProjectItem>
-      <ProjectItem
-        style="width: 30%; height: 635px"
-        projectName="Lorem Ipsum"
-        projectStacks="is simply dummy tex"
-        img="https://via.placeholder.com/433x635"
-      ></ProjectItem>
-    </div>
-  </div>
+        v-for="project in pair"
+        :key="project.img"
+        :class="project.class"
+        :projectName="project.projectName"
+        :projectStacks="project.projectStacks"
+        :img="project.img"
+      />
+    </tuple>
+  </section>
 </template>
 
-<style scoped></style>
+<script lang="ts" setup>
+import ProjectItem from "@/components/organisms/ProjectItem/ProjectItem.vue";
+
+const projectPairs = [
+  [
+    {
+      class: "item-60",
+      projectName: "Lorem Ipsum",
+      projectStacks: "is simply dummy text",
+      img: "https://via.placeholder.com/866x635",
+    },
+    {
+      class: "item-30",
+      projectName: "Lorem Ipsum",
+      projectStacks: "is simply dummy text",
+      img: "https://via.placeholder.com/433x635",
+    },
+  ],
+  [
+    {
+      class: "item-30",
+      projectName: "Lorem Ipsum",
+      projectStacks: "is simply dummy text",
+      img: "https://via.placeholder.com/433x635",
+    },
+    {
+      class: "item-60",
+      projectName: "Lorem Ipsum",
+      projectStacks: "is simply dummy text",
+      img: "https://via.placeholder.com/866x635",
+    },
+  ],
+  [
+    {
+      class: "item-60",
+      projectName: "Lorem Ipsum",
+      projectStacks: "is simply dummy text",
+      img: "https://via.placeholder.com/866x635",
+    },
+    {
+      class: "item-30",
+      projectName: "Lorem Ipsum",
+      projectStacks: "is simply dummy text",
+      img: "https://via.placeholder.com/433x635",
+    },
+  ],
+];
+</script>
+
+<style scoped>
+.tuple-items {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-bottom: 150px;
+  justify-content: space-between;
+}
+
+.item-60 {
+  width: 60% !important;
+  height: 635px !important;
+}
+
+.item-30 {
+  width: 30% !important;
+  height: 635px !important;
+}
+</style>

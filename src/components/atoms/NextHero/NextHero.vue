@@ -1,59 +1,30 @@
 <template>
-  <div
-    class="next-hero"
-    style="width: 100%; height: 168.11px; overflow: hidden"
-  >
-    <div class="next-hero-title" style="width: 100%; height: 168.11px">
+  <section class="next-hero flex w-full overflow-hidden items-center">
+    <div class="next-hero-title w-full">
       <div class="next-hero-content">
-        <div class="scrolling-text">
+        <p class="scrolling-text">
           PYTHON FLASK SQLALCHEMY POSTGRESQL MYSQL JAVA SPRING BOOT MVC ASP.NET
           CORE MVC C# VUE.JS TYPESCRIPT CSS TAILWIND JEST FLUTTER FIREBASE
           DOCKER AWS S3 AZURE
-        </div>
+        </p>
       </div>
     </div>
-  </div>
-  <div
-    class="contact-message"
-    style="
-      width: 100%;
-      height: 53px;
-      padding-left: 80px;
-      opacity: 0.93;
-      margin-top: 70px;
-      margin-bottom: 140px;
-    "
-  >
-    <div
-      class="contact-text"
-      style="
-        color: #222222;
-        font-size: 19px;
-        font-weight: 500;
-        text-transform: uppercase;
-        line-height: 26px;
-        word-wrap: break-word;
-      "
-    >
-      Got a project?
-      <br />
-      Let's work together
+  </section>
+  <section class="contact-message w-full pl-20 mt-16 mb-36 opacity-90">
+    <div class="contact-text">
+      <p>Got a project?</p>
+      <p>Let's work together</p>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>
 .next-hero {
-  width: 100%;
-  height: 168.11px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
+  height: 168px;
 }
 
 .next-hero-title {
-  width: 100%;
-  height: 168.11px;
+  height: 168px;
 }
 
 .next-hero-content {
@@ -77,12 +48,7 @@
 }
 
 .contact-message {
-  width: 100%;
   height: 53px;
-  padding-left: 80px;
-  opacity: 0.93;
-  margin-top: 70px;
-  margin-bottom: 140px;
 }
 
 .contact-text {

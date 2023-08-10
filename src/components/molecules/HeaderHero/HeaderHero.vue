@@ -1,57 +1,44 @@
 <template>
-  <div class="header">
-    <img class="link-logo-png" src="https://via.placeholder.com/131x50" />
+  <header
+    class="header flex w-full h-32 pt-7 px-16 justify-between items-center"
+  >
+    <img
+      class="link-logo"
+      src="https://via.placeholder.com/131x50"
+      alt="Logo"
+    />
 
-    <div class="nav-list">
+    <nav class="nav-list flex pt-5 pb-4 ml-5 gap-12">
       <div class="item-link">
-        <div class="home">Home</div>
+        <a href="#" class="item-link-home">Home</a>
       </div>
       <div class="item-link">
-        <div class="home">Contact</div>
+        <a href="#" class="item-link-contact">Contact</a>
       </div>
       <div class="item-link">
-        <div class="home">About</div>
+        <a href="#" class="item-link-about">About</a>
       </div>
-    </div>
-  </div>
+    </nav>
+  </header>
 </template>
 
 <script lang="ts" setup></script>
 
 <style scoped>
-.header {
-  width: 100%;
-  height: 120px;
-  padding: 30px 64px;
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-}
-
-.link-logo-png {
+.link-logo {
   width: 131px;
   height: 50px;
-  position: relative;
-}
-
-.nav-list {
-  padding-top: 20px;
-  padding-bottom: 16px;
-  padding-left: 25px;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 50px;
-  display: flex;
 }
 
 .item-link {
   display: flex;
+  cursor: pointer;
 }
 
-.item-link div {
+.item-link a {
   color: #222222;
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: uppercase;
   line-height: 24px;
   word-wrap: break-word;
