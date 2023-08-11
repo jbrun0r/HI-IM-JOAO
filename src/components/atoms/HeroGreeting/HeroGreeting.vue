@@ -62,15 +62,113 @@
   word-wrap: break-word;
 }
 
-@media (max-width: 574px) {
+@media (max-width: 299px) {
+  .hero-section {
+    height: 350px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .name {
+    display: block;
+    width: 100%;
+    font-size: 50px !important;
+    line-height: 70px;
+  }
+  .description {
+    width: 80%;
+    top: 300px !important;
+    left: 10%;
+    padding-right: 0% !important;
+    justify-content: flex-end;
+  }
+
+  .description-about {
+    text-align: left;
+  }
+  .greeting {
+    width: 100% !important;
+    font-size: 50px !important;
+    line-height: 70px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 386px) {
+  .hero-section {
+    height: 380px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .name {
+    display: block;
+    width: 100%;
+    font-size: 80px !important;
+    line-height: 100px;
+  }
+  .description {
+    width: 80%;
+    top: 366px !important;
+    left: 10%;
+    padding-right: 0% !important;
+    justify-content: flex-end;
+  }
+
+  .description-about {
+    text-align: left;
+  }
+  .greeting {
+    width: 100% !important;
+    font-size: 80px !important;
+    line-height: 100px;
+  }
+}
+
+@media (min-width: 387px) and (max-width: 500px) {
+  .hero-section {
+    height: 420px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .name {
+    display: block;
+    width: 100%;
+    font-size: 100px !important;
+    line-height: 120px;
+  }
+  .description {
+    display: flex;
+    width: 70%;
+    top: 166px !important;
+    padding-left: 27% !important;
+    padding-right: 1% !important;
+    justify-content: flex-end;
+  }
+
+  .description-about {
+    text-align: right;
+  }
+  .greeting {
+    width: 60% !important;
+    font-size: 100px !important;
+    line-height: 120px;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 574px) {
   .hero-section {
     padding-top: 20px;
     height: 530px;
   }
   .name {
     display: block;
-    width: 100%;
+    width: 105%;
     font-size: 138px;
+    line-height: 150px;
   }
   .description {
     display: flex;
@@ -84,8 +182,9 @@
     text-align: right;
   }
   .greeting {
-    width: 70%;
+    width: 60% !important;
     font-size: 138px;
+    line-height: 150px;
   }
 }
 

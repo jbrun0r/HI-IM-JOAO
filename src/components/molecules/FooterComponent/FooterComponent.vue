@@ -54,6 +54,8 @@
     column-gap: 1.25rem;
     flex-direction: column;
     height: 165px;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 
   .footer-left {
@@ -78,8 +80,5 @@
     margin-bottom: 16px;
     justify-content: center;
   }
-}
-
-@media (min-width: 668px) and (max-width: 767px) {
 }
 </style>

@@ -1,13 +1,13 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 
 const routes: Array<RouteRecordRaw> = [
-  // {
-  //   path: "/:pathMatch(.*)*",
-  //   component: () => import("../components/pages/HomeView/HomeView.vue"),
-  //   meta: { auth: false, blockAuthUser: true },
-  // },
   {
-    path: "/home",
+    path: "/:pathMatch(.*)*",
+    component: () => import("../components/pages/HomeView/HomeView.vue"),
+    meta: { auth: false, blockAuthUser: true },
+  },
+  {
+    path: "/",
     name: "homeView",
     component: () => import("../components/pages/HomeView/HomeView.vue"),
     meta: { auth: false, blockAuthUser: true },
@@ -21,7 +21,7 @@ const routes: Array<RouteRecordRaw> = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHashHistory(),
   routes,
 });
 
