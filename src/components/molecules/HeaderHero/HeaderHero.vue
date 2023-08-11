@@ -57,7 +57,7 @@ activeItem.value = item.value;
 
 <style scoped>
 .link-logo {
-  width: 131px;
+  width: 50px;
   height: 50px;
   color: #222222;
   font-size: 36px;
@@ -82,5 +82,27 @@ activeItem.value = item.value;
 
 .active-link {
   border-bottom: 1px solid #222222;
+}
+
+@media (max-width: 299px) {
+  .header {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .nav-list {
+    gap: 0.5rem;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 500px) {
+  .header {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .nav-list {
+    gap: 1.75rem;
+  }
 }
 </style>

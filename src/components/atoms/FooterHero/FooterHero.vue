@@ -36,4 +36,24 @@
 .scroll-to-explore-icon {
   color: #222222;
 }
+
+@media (max-width: 422px) {
+  .footer-section {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 3rem;
+  }
+  .scroll-to-explore-text {
+    display: none;
+  }
+}
+
+@media (min-width: 422px) and (max-width: 500px) {
+  .footer-section {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
 </style>

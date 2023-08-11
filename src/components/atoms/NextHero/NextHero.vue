@@ -59,4 +59,12 @@
   line-height: 26px;
   word-wrap: break-word;
 }
+
+@media (max-width: 500px) {
+  .contact-message {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 80px;
+  }
+}
 </style>

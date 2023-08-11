@@ -54,7 +54,36 @@ const { projectPairs } = toRefs(props);
   height: 635px !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 520px) {
+  .portfolio-section {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .tuple-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 150px;
+    justify-content: space-between;
+    padding-bottom: 0px;
+    padding-top: 30px;
+  }
+
+  .item-60 {
+    width: 100% !important;
+    height: 60% !important;
+    padding-bottom: 60px;
+  }
+
+  .item-30 {
+    width: 100% !important;
+    height: 60% !important;
+    padding-bottom: 60px;
+  }
+}
+
+@media (min-width: 521px) and (max-width: 767px) {
   .tuple-items {
     display: flex;
     flex-direction: column;
@@ -102,35 +131,26 @@ const { projectPairs } = toRefs(props);
 }
 
 @media (min-width: 868px) and (max-width: 967px) {
-  .tuple-items {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-bottom: 150px;
-    justify-content: space-between;
-    padding-bottom: 0px;
-  }
-
   .item-60 {
-    width: 100% !important;
-    height: 60% !important;
-    padding-bottom: 100px;
+    width: 45% !important;
+    height: 300px !important;
+    padding-bottom: 50px;
   }
 
   .item-30 {
-    width: 100% !important;
-    height: 60% !important;
-    padding-bottom: 100px;
+    width: 45% !important;
+    height: 300px !important;
+    padding-bottom: 50px;
   }
 }
 
 @media (min-width: 968px) and (max-width: 1439px) {
   .item-60 {
-    height: 400px !important;
+    height: 420px !important;
   }
 
   .item-30 {
-    height: 400px !important;
+    height: 420px !important;
   }
 }
 

@@ -45,9 +45,9 @@ const redirectToLink = () => {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
   pointer-events: none;
-  transition: opacity 0.7s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .image-container:hover .image-overlay {
@@ -71,5 +71,28 @@ const redirectToLink = () => {
   line-height: 20px;
   word-wrap: break-word;
   opacity: 0.5;
+  text-align: right;
+}
+
+@media (max-width: 320px) {
+  .project-caption {
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .image-overlay {
+    background: rgba(0, 0, 0, 0);
+    pointer-events: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 321px) and (max-width: 967px) {
+  .image-overlay {
+    background: rgba(0, 0, 0, 0);
+    pointer-events: none;
+    transition: none;
+  }
 }
 </style>
