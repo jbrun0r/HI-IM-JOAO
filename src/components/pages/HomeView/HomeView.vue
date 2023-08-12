@@ -88,5 +88,6 @@ const projectPairs = [
 <style scoped>
 .home-page {
   background: #eee;
+  color: #222 !important;
 }
 </style>

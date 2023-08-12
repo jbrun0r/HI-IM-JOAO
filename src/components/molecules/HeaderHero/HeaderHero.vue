@@ -1,7 +1,9 @@
 <script lang="ts" setup>
 import { ref, toRef } from "vue";
+import { useRouter } from "vue-router";
 
 const activeItem = ref("");
+const router = useRouter();
 
 type Item = "home" | "contact" | "about";
 
@@ -26,8 +28,8 @@ activeItem.value = item.value;
     <nav class="nav-list flex pt-5 pb-4 ml-5 gap-12">
       <div class="item-link">
         <a
-          href="#"
-          class="item-link-home"
+          @click="router.push({ name: 'homeView' })"
+          class="item-link-home cursor-pointer"
           :class="{ 'active-link': activeItem === 'home' }"
         >
           Home
@@ -44,8 +46,8 @@ activeItem.value = item.value;
       </div>
       <div class="item-link">
         <a
-          href="#"
-          class="item-link-about cursor-not-allowed"
+          @click="router.push({ name: 'aboutView' })"
+          class="item-link-about cursor-pointer"
           :class="{ 'active-link': activeItem === 'about' }"
         >
           About
@@ -59,7 +61,6 @@ activeItem.value = item.value;
 .link-logo {
   width: 50px;
   height: 50px;
-  color: #222222;
   font-size: 36px;
   font-weight: 500;
   text-transform: uppercase;
@@ -72,7 +73,6 @@ activeItem.value = item.value;
 }
 
 .item-link a {
-  color: #222222;
   font-size: 13px;
   font-weight: 500;
   text-transform: uppercase;
@@ -81,7 +81,7 @@ activeItem.value = item.value;
 }
 
 .active-link {
-  border-bottom: 1px solid #222222;
+  border-bottom: 1px solid;
 }
 
 @media (max-width: 299px) {
