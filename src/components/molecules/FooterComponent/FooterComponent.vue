@@ -41,7 +41,6 @@
 <style scoped>
 .scroll-text,
 .year-text-c {
-  color: #222222;
   font-size: 13px;
   font-weight: 500;
   text-transform: uppercase;

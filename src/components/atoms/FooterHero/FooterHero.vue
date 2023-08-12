@@ -16,7 +16,6 @@
 
 <style scoped>
 .scroll-to-explore {
-  color: #222222;
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
@@ -25,16 +24,11 @@
 }
 
 .project-count {
-  color: #222222;
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
   line-height: 30px;
   word-wrap: break-word;
-}
-
-.scroll-to-explore-icon {
-  color: #222222;
 }
 
 @media (max-width: 422px) {
