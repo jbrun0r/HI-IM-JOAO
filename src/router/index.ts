@@ -13,6 +13,12 @@ const routes: Array<RouteRecordRaw> = [
     meta: { auth: false, blockAuthUser: true },
   },
   {
+    path: "/contact",
+    name: "contactView",
+    component: () => import("../components/pages/ContactView/ContactView.vue"),
+    meta: { auth: false, blockAuthUser: true },
+  },
+  {
     path: "/about",
     name: "aboutView",
     component: () => import("../components/pages/AboutView/AboutView.vue"),
