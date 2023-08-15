@@ -1,12 +1,12 @@
 <template>
-  <html class="home-page">
+  <div class="home-page h-screen">
     <HeaderHero :active-item="'home'" />
     <HeroGreeting />
     <FooterHero />
     <ProjectGalley :project-pairs="projectPairs" />
     <NextHero />
     <FooterComponent />
-  </html>
+  </div>
 </template>
 
 <script lang="ts" setup>

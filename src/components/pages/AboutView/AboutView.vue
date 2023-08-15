@@ -1,9 +1,9 @@
 <template>
-  <html class="about-page h-full">
+  <div class="about-page h-full">
     <HeaderHero :active-item="'about'" />
     <AboutComponent />
     <FooterComponent />
-  </html>
+  </div>
 </template>
 
 <script lang="ts" setup>

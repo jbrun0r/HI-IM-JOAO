@@ -37,8 +37,8 @@ activeItem.value = item.value;
       </div>
       <div class="item-link cursor-not-allowed">
         <a
-          href="#"
-          class="item-link-contact cursor-not-allowed"
+          @click="router.push({ name: 'contactView' })"
+          class="item-link-about cursor-pointer"
           :class="{ 'active-link': activeItem === 'contact' }"
         >
           Contact
