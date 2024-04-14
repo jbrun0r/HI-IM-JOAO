@@ -8,15 +8,6 @@ const props = defineProps({
   skills: { type: Array as () => Array<string>, required: true },
 });
 
-export interface Experience {
-  role: string;
-  company: string;
-  period: string;
-  description: string;
-  tasks: string;
-  skills: string[];
-}
-
 const wrapperStyle = `
   font-size: 20px;
   font-weight: 300;

@@ -2,25 +2,33 @@
   <section class="hero-section w-full py-24 px-16">
     <div class="title-wrapper w-full justify-start items-start inline-flex">
       <h1 class="heading w-full">
-        <p class="greeting">Hi, I'm</p>
-        <p class="name">João</p>
+        <p class="greeting">{{ greeting }}</p>
+        <p class="name">{{ name }}</p>
       </h1>
     </div>
     <div class="description w-72 h-20 left-20">
       <div class="description-wrapper">
         <span class="description-about">
-          <p>Researcher,</p>
-          <p>Full Stack Developer</p>
-          <p>and Computer Engineering student</p>
-          <p>at the Federal Institute of Education,</p>
-          <p>Science and Technology of Ceará.</p>
+          <template v-for="(paragraph, index) in description" :key="index">
+            <p>{{ paragraph }}</p>
+          </template>
         </span>
       </div>
     </div>
   </section>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { toRefs } from "vue";
+
+const props = defineProps({
+  description: { type: Array as () => Array<string>, required: true },
+  greeting: { type: String, required: true },
+  name: { type: String, required: true },
+});
+
+const { description, greeting, name } = toRefs(props);
+</script>
 
 <style scoped>
 .hero-section {

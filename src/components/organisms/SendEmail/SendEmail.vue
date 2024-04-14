@@ -5,6 +5,9 @@ import InputWithValidation from "../../molecules/InputWithValidation/InputWithVa
 import { useForm } from "vee-validate";
 import * as yup from "yup";
 import { sendEmail, SendEmail } from "@/services/emailjs/sendEmail/send-email";
+import { useToast } from "primevue/usetoast";
+import Toast from "primevue/toast";
+const toast = useToast();
 
 const namePlaceholder = ref("What's Your Name");
 const emailPlaceholder = ref("Your e-mail");
@@ -49,9 +52,17 @@ const onSubmit = handleSubmit(async (values) => {
 
     await sendEmail(data);
     setValues({ name: "", email: "", subject: "" });
+    toast.add({
+      severity: "success",
+      summary: "Email sent successfully",
+      life: 3000,
+    });
   } catch (error) {
-    console.error("Error sending e-mail:", error);
-    error.value = "An error occurred while sending the e-mail.";
+    toast.add({
+      severity: "error",
+      summary: "Error sending email",
+      life: 3000,
+    });
   }
 });
 
@@ -91,6 +102,7 @@ onUnmounted(() => {
       </div>
     </div>
   </div>
+  <Toast position="bottom-right" />
 </template>
 
 <style lang="scss" scoped>

@@ -8,11 +8,19 @@
         <vue-feather class="scroll-to-explore-icon" type="arrow-down-right" />
       </div>
     </div>
-    <div class="project-count">All Projects (08)</div>
+    <div class="project-count">All Projects ({{ projectCount }})</div>
   </footer>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { toRefs } from "vue";
+
+const props = defineProps({
+  projectCount: { type: Number },
+});
+
+const { projectCount } = toRefs(props);
+</script>
 
 <style scoped>
 .scroll-to-explore {

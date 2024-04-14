@@ -10,8 +10,9 @@
       />
       <p class="scroll-text">Thanks for scrolling.</p>
     </div>
-    <div class="footer-center flex justify-center w-1/3">
-      <p class="year-text-c">© 2023 João Bruno</p>
+    <div class="footer-center flex flex-col justify-center w-1/3 text-center">
+      <p class="year-text-c">MIT License</p>
+      <p class="year-text-c">Copyright © {{ year }} João</p>
     </div>
     <nav
       class="footer-right flex flex-row gap-x-5 items-center w-1/3 justify-end align-items-center"
@@ -36,7 +37,11 @@
   </footer>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { ref } from "vue";
+
+const year = ref(new Date().getFullYear());
+</script>
 
 <style scoped>
 .scroll-text,

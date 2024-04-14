@@ -1,4 +1,8 @@
 <template>
+  <HeaderGallery
+    v-if="projectPairs"
+    :projectCount="projectPairs.length * 2 || 0"
+  />
   <section
     class="portfolio-section flex flex-col w-full px-20 pb-20 justify-between"
   >
@@ -19,14 +23,8 @@
 <script lang="ts" setup>
 import { toRefs } from "vue";
 import ProjectItem from "@/components/organisms/ProjectItem/ProjectItem.vue";
-
-interface Project {
-  class: string;
-  projectName: string;
-  projectStacks: string;
-  img: string;
-  link: string;
-}
+import HeaderGallery from "@/components/atoms/HeaderGallery/HeaderGallery.vue";
+import { Project } from "@/shared/types";
 
 const props = defineProps({
   projectPairs: { type: Array as () => Array<Array<Project>>, required: true },

@@ -3,9 +3,7 @@
     <div class="next-hero-title w-full">
       <div class="next-hero-content">
         <p class="scrolling-text">
-          PYTHON FLASK SQLALCHEMY POSTGRESQL MYSQL JAVA SPRING BOOT MVC ASP.NET
-          CORE MVC C# VUE.JS TYPESCRIPT CSS TAILWIND JEST FLUTTER FIREBASE
-          DOCKER AWS S3 AZURE
+          {{ skills }}
         </p>
       </div>
     </div>
@@ -17,6 +15,16 @@
     </div>
   </section>
 </template>
+
+<script lang="ts" setup>
+import { toRefs } from "vue";
+
+const props = defineProps({
+  skills: { type: String },
+});
+
+const { skills } = toRefs(props);
+</script>
 
 <style scoped>
 .next-hero {

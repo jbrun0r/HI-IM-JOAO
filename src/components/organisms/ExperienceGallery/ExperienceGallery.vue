@@ -3,6 +3,7 @@
     <p class="section-title">EXPERIENCE</p>
     <div class="experience-items">
       <ExperienceItem
+        class="item"
         v-for="(experience, index) in props.experienceList"
         :key="index"
         :role="experience.role"
@@ -18,10 +19,10 @@
 
 <script lang="ts" setup>
 import ExperienceItem from "@/components/organisms/ExperienceItem/ExperienceItem.vue";
-import { Experience } from "@/components/organisms/ExperienceItem/ExperienceItem.vue";
+import { Experience } from "@/shared/types";
 
 const props = defineProps({
-  experienceList: { type: Array as () => Experience[], required: true },
+  experienceList: { type: Array as () => Array<Experience>, required: true },
 });
 </script>
 
@@ -39,25 +40,25 @@ const props = defineProps({
 
 .experience-items {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   padding-top: 30px;
   padding-left: 14px;
-  gap: 40px;
+  gap: 80px;
+}
+
+.item {
+  width: 45% !important;
 }
 
 @media (max-width: 967px) {
-  .experience-container {
-    padding-top: 40px;
+  .experience-items {
+    flex-direction: column;
   }
 
-  .experience-items {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-top: 30px;
-    padding-left: 14px;
-    gap: 80px;
+  .item {
+    width: 100% !important;
   }
 }
 

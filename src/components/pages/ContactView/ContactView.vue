@@ -1,5 +1,5 @@
 <template>
-  <div class="about-page flex flex-col">
+  <div class="contact-page flex flex-col">
     <HeaderHero :active-item="'contact'" />
     <ContactNav />
     <SendEmail />
@@ -17,7 +17,7 @@ import FooterComponent from "@/components/molecules/FooterComponent/FooterCompon
 </script>
 
 <style lang="scss" scoped>
-.about-page {
+.contact-page {
   background: #eee;
   color: #222 !important;
   min-height: 100vh;

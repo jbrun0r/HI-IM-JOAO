@@ -1,14 +1,24 @@
 <template>
   <p class="academic-education-small">ACADEMIC EDUCATION</p>
   <span class="academic-education-description">
-    Computer Engineering - Bachelor's degree <br />
-    Federal Institute of Education, Science and Technology of Ceará.
+    {{ degree }} <br />
+    {{ university }}
     <br />
-    February 2020 - November 2025
+    {{ period }}
   </span>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { toRefs } from "vue";
+
+const props = defineProps({
+  degree: { type: String, required: true },
+  university: { type: String, required: true },
+  period: { type: String, required: true },
+});
+
+const { degree, university, period } = toRefs(props);
+</script>
 
 <style scoped>
 .academic-education-small {
